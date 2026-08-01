@@ -37,13 +37,14 @@ footer{background:#030805;color:#c7d0c8}.footer-main{padding:65px 0;display:grid
 .content-card p{color:var(--muted)}
 .detail-list{display:grid;gap:13px;margin-top:24px}
 .detail-list span{padding:15px 17px;background:#f2f7f2;border-left:4px solid var(--green);font-weight:700}
-.cta-strip{padding:55px 0;background:var(--green);color:#061008}
+.cta-strip{padding:44px 0;background:var(--green);color:#061008}
 .cta-strip .wrap{display:flex;justify-content:space-between;align-items:center;gap:30px}
 .cta-strip h2{font:800 42px/.95 "Barlow Condensed";text-transform:uppercase;margin:0}
-.cta-strip .btn{background:#061008;color:white}
+.cta-strip .btn{background:#061008;color:white;white-space:nowrap;flex:0 0 auto}
+.about-cta h2{font-size:clamp(30px,3.1vw,38px);white-space:nowrap}
 .active{color:var(--green)!important}
 @media(max-width:950px){.brand{width:auto}.content-grid{grid-template-columns:1fr}.cta-strip .wrap{align-items:flex-start;flex-direction:column}}
-@media(max-width:620px){.wordmark-icon{width:40px;height:40px;font-size:23px}.wordmark-text strong{font-size:22px}.wordmark-text small{font-size:6px;letter-spacing:.13em}.page-hero{padding:80px 0 65px}.page-hero h1{font-size:58px}.cta-strip h2{font-size:36px}}
+@media(max-width:620px){.wordmark-icon{width:40px;height:40px;font-size:23px}.wordmark-text strong{font-size:22px}.wordmark-text small{font-size:6px;letter-spacing:.13em}.page-hero{padding:80px 0 65px}.page-hero h1{font-size:58px}.cta-strip{padding:36px 0}.cta-strip h2{font-size:36px}.about-cta h2{white-space:normal}}
 
 .brand img,.footer-logo img{
   display:block;
@@ -825,4 +826,32 @@ footer{background:#030805;color:#c7d0c8}.footer-main{padding:65px 0;display:grid
   .ref-btn{width:100%}
   .reference-card{padding:31px 24px}
   .reference-features{grid-template-columns:1fr}
+}
+
+/* About and Greenleaf Difference content */
+.about-story{background:#f5f8f5}
+.about-intro{max-width:920px;margin-bottom:48px}
+.about-intro h2{max-width:760px}
+.about-intro>p:last-child{color:var(--muted);font-size:17px}
+.about-principles{display:grid;grid-template-columns:.72fr 1.28fr;gap:28px;align-items:start}
+.about-principles .content-card{height:100%}
+.about-service-list{display:grid;grid-template-columns:1fr 1fr;gap:0 30px;margin:22px 0 0;padding:0;list-style:none}
+.about-service-list li{position:relative;padding:11px 0 11px 23px;border-bottom:1px solid var(--border);color:#354238;font-size:14px;font-weight:600}
+.about-service-list li:before{content:"";position:absolute;left:0;top:18px;width:8px;height:8px;background:var(--green);transform:rotate(45deg)}
+.about-closing{max-width:990px;margin:42px 0 0;padding:26px 30px;border-left:5px solid var(--green);background:#e9f3e9;color:#354238;font-size:17px;font-weight:600}
+.difference-plain{padding:80px 0 95px;background:#f5f8f5}
+.difference-plain-inner{max-width:none}
+.difference-plain h2{max-width:780px;margin-bottom:28px}
+.difference-plain p:not(.kicker){max-width:900px;margin:0 0 25px;color:#465449;font-size:16px;line-height:1.8}
+.difference-plain p:last-child{margin-bottom:0}
+
+@media(max-width:950px){
+  .about-principles{grid-template-columns:1fr}
+}
+
+@media(max-width:620px){
+  .about-service-list{grid-template-columns:1fr}
+  .about-closing{padding:22px}
+  .difference-plain{padding:62px 0 72px}
+  .difference-plain p:not(.kicker){font-size:16px;line-height:1.7}
 }

@@ -12,4 +12,4 @@ Email: ${d.get('email')}
 Service: ${d.get('service')}
 
 Project Details:
-${d.get('details')}`);location.href=`mailto:info@greenleafelectric.com?subject=${subject}&body=${body}`;});}
+${d.get('details')}`);location.href=`mailto:tammym@glecontractor.com?subject=${subject}&body=${body}`;});}
