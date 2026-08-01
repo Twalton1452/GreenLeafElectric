@@ -603,7 +603,7 @@ footer{background:#030805;color:#c7d0c8}.footer-main{padding:65px 0;display:grid
 .reference-hero{
   position:relative;
   overflow:hidden;
-  min-height:calc(100vh - 220px);
+  min-height:calc(100vh - 170px);
   background:
     radial-gradient(circle at 77% 45%,rgba(33,130,50,.22),transparent 31%),
     linear-gradient(115deg,#020603 0%,#061008 56%,#0b2110 100%);
@@ -636,7 +636,7 @@ footer{background:#030805;color:#c7d0c8}.footer-main{padding:65px 0;display:grid
   position:relative;
   z-index:2;
   width:min(1390px,calc(100% - 54px));
-  min-height:calc(100vh - 220px);
+  min-height:calc(100vh - 170px);
   margin:0 auto;
   padding:76px 0 86px;
   display:grid;
@@ -803,8 +803,11 @@ footer{background:#030805;color:#c7d0c8}.footer-main{padding:65px 0;display:grid
   .wide-logo{width:575px;height:150px;flex-basis:575px}
   .site-header .links{gap:18px}
   .site-header .links a{font-size:11px}
-  .reference-hero,.reference-inner{min-height:calc(100vh - 175px)}
   .reference-inner{gap:58px}
+}
+
+@media(max-width:1250px){
+  .reference-hero,.reference-inner{min-height:calc(100vh - 145px)}
 }
 
 @media(max-width:950px){
