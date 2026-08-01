@@ -722,7 +722,7 @@ footer{background:#030805;color:#c7d0c8}.footer-main{padding:65px 0;display:grid
   background:linear-gradient(145deg,rgba(18,59,27,.96),rgba(7,22,11,.98));
   border:1px solid #3c8245;
   box-shadow:0 34px 90px rgba(0,0,0,.42),inset 0 0 72px rgba(85,239,58,.04);
-  clip-path:polygon(6% 0,100% 0,100% 93%,94% 100%,0 100%,0 7%);
+  clip-path:none;
 }
 
 .reference-card:after{
@@ -857,4 +857,414 @@ footer{background:#030805;color:#c7d0c8}.footer-main{padding:65px 0;display:grid
   .about-closing{padding:22px}
   .difference-plain{padding:62px 0 72px}
   .difference-plain p:not(.kicker){font-size:16px;line-height:1.7}
+}
+
+/* Compact navigation and page-level logo placement */
+.site-header .nav{
+  width:min(1390px,calc(100% - 44px));
+  min-height:86px!important;
+  height:86px!important;
+  padding:0!important;
+  justify-content:flex-end;
+}
+
+.site-header .links{
+  gap:25px!important;
+}
+
+.site-header .links a{
+  font-size:12px!important;
+}
+
+.reference-hero,
+.reference-inner{
+  min-height:calc(100vh - 86px);
+}
+
+.reference-copy h1{
+  font-size:clamp(66px,5.8vw,96px);
+}
+
+.reference-card{
+  padding:52px 48px 46px;
+  border:1px solid #3c8245;
+  background:linear-gradient(145deg,rgba(18,59,27,.96),rgba(7,22,11,.98));
+  box-shadow:0 34px 90px rgba(0,0,0,.42),inset 0 0 72px rgba(85,239,58,.04);
+  clip-path:none;
+}
+
+.reference-card:after{
+  display:block;
+}
+
+.home-hero-logo{
+  width:min(100%,390px);
+  margin:0 0 30px;
+  display:block;
+  overflow:visible;
+  filter:drop-shadow(0 30px 55px rgba(0,0,0,.4));
+}
+
+.home-hero-logo img{
+  width:150%;
+  max-width:none;
+  height:auto;
+  transform:translateX(-15.1%);
+}
+
+.page-hero{
+  padding:78px 0 72px;
+}
+
+.page-hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(340px,.68fr);
+  align-items:center;
+  gap:70px;
+}
+
+.page-hero-copy{
+  min-width:0;
+}
+
+.page-hero-logo{
+  width:min(100%,500px);
+  justify-self:end;
+  display:block;
+  overflow:visible;
+  filter:drop-shadow(0 24px 45px rgba(0,0,0,.38));
+}
+
+.page-hero-logo img{
+  width:175%;
+  max-width:none;
+  height:auto;
+  transform:translateX(-23%);
+}
+
+@media(max-width:950px){
+  .site-header .nav{
+    min-height:82px!important;
+    height:82px!important;
+  }
+
+  .site-header .links{
+    top:82px!important;
+  }
+
+  .reference-hero,
+  .reference-inner{
+    min-height:auto;
+  }
+
+  .page-hero-grid{
+    grid-template-columns:minmax(0,1fr) minmax(250px,.55fr);
+    gap:34px;
+  }
+}
+
+@media(max-width:700px){
+  .page-hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .page-hero-logo{
+    width:min(70vw,410px);
+    justify-self:center;
+  }
+}
+
+@media(max-width:620px){
+  .site-header .nav{
+    width:min(100% - 28px,1390px);
+    min-height:72px!important;
+    height:72px!important;
+  }
+
+  .site-header .links{
+    top:72px!important;
+  }
+
+  .reference-inner{
+    padding:48px 0 60px;
+  }
+
+  .reference-copy h1{
+    font-size:60px;
+  }
+
+  .home-hero-logo{
+    width:min(95%,330px);
+    margin:0 0 26px;
+  }
+
+  .reference-card{
+    padding:31px 24px;
+  }
+
+  .page-hero{
+    padding:62px 0 58px;
+  }
+}
+
+/* Careers */
+.careers-section{
+  background:#f5f8f5;
+}
+
+.careers-layout{
+  display:grid;
+  grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);
+  align-items:start;
+  gap:70px;
+}
+
+.careers-intro h2{
+  margin:0 0 22px;
+  max-width:650px;
+  font:800 clamp(42px,5vw,66px)/.95 "Barlow Condensed",sans-serif;
+  text-transform:uppercase;
+  letter-spacing:-.025em;
+}
+
+.careers-intro > p:not(.kicker){
+  color:var(--muted);
+  font-size:17px;
+}
+
+.application-options{
+  display:grid;
+  gap:14px;
+  margin-top:28px;
+}
+
+.application-option{
+  padding:24px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-left:4px solid var(--green);
+  box-shadow:0 12px 30px rgba(20,50,28,.06);
+}
+
+.application-option h3{
+  margin:0 0 8px;
+  font:800 25px/1 "Barlow Condensed",sans-serif;
+  text-transform:uppercase;
+}
+
+.application-option p{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.65;
+}
+
+.careers-email{
+  margin-top:18px;
+  background:var(--green);
+  color:#061008;
+}
+
+.careers-email:hover{
+  background:var(--lime);
+}
+
+.application-actions{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:14px 18px;
+  margin-top:18px;
+}
+
+.application-download{
+  background:var(--green);
+  color:#061008;
+}
+
+.application-download:hover{
+  background:var(--lime);
+}
+
+.application-email-link{
+  color:#168a30;
+  font-size:13px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+
+.application-email-link:hover{
+  color:#0d6220;
+}
+
+.careers-email-note{
+  margin:18px 0 0;
+  font-size:13px!important;
+}
+
+.careers-email-note a{
+  color:#168a30;
+  font-weight:800;
+}
+
+.career-positions{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+
+.career-position{
+  min-height:190px;
+  padding:28px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-bottom:5px solid var(--green);
+  box-shadow:0 18px 45px rgba(20,50,28,.07);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.career-position span{
+  color:#199136;
+  font:800 18px "Barlow Condensed",sans-serif;
+  letter-spacing:.1em;
+}
+
+.career-position h3{
+  margin:35px 0 0;
+  font:800 34px/1 "Barlow Condensed",sans-serif;
+  text-transform:uppercase;
+}
+
+@media(max-width:950px){
+  .careers-layout{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+}
+
+@media(max-width:620px){
+  .career-positions{
+    grid-template-columns:1fr;
+  }
+
+  .career-position{
+    min-height:145px;
+  }
+
+  .careers-email,
+  .application-download{
+    width:100%;
+  }
+}
+
+/* Compact horizontal navigation on tablets and phones */
+@media(max-width:950px){
+  .site-header{
+    position:sticky;
+    top:0;
+    overflow:hidden;
+  }
+
+  .site-header .nav{
+    width:100%;
+    min-height:0!important;
+    height:auto!important;
+    padding:0!important;
+    display:block;
+  }
+
+  .site-header .menu{
+    display:none!important;
+  }
+
+  .site-header .links{
+    position:static!important;
+    display:flex!important;
+    flex-direction:row!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    gap:0!important;
+    width:100%;
+    margin:0;
+    padding:0 10px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space:nowrap;
+    background:#050906;
+    border:0;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .site-header .links::-webkit-scrollbar{
+    display:none;
+  }
+
+  .site-header .links a{
+    flex:0 0 auto;
+    padding:15px 11px!important;
+    color:#f3f6f3;
+    font-size:10px!important;
+    line-height:1.2;
+    letter-spacing:.035em;
+    text-align:center;
+  }
+
+  .site-header .quote-link{
+    padding:15px 11px!important;
+    background:transparent;
+    color:#55ef3a!important;
+    clip-path:none;
+  }
+}
+
+@media(max-width:520px){
+  .site-header .links{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    padding:0;
+    overflow:visible;
+    white-space:normal;
+  }
+
+  .site-header .links a,
+  .site-header .quote-link{
+    width:100%;
+    min-height:38px;
+    padding:8px 4px!important;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-right:1px solid #18351f;
+    border-bottom:1px solid #18351f;
+    font-size:9px!important;
+    line-height:1.1;
+    white-space:normal;
+  }
+
+  .site-header .links a:nth-child(3n){
+    border-right:0;
+  }
+
+  .site-header .links a:nth-child(n+4){
+    border-bottom:0;
+  }
+
+  .site-header .links a[href="safety.html"],
+  .site-header .links a[href="contact.html"]{
+    font-size:0!important;
+  }
+
+  .site-header .links a[href="safety.html"]::after{
+    content:"Difference";
+    font-size:9px;
+  }
+
+  .site-header .links a[href="contact.html"]::after{
+    content:"Get a Quote";
+    font-size:9px;
+  }
 }
